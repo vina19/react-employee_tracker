@@ -7,6 +7,7 @@ import FilterByState from "./components/FilterByState/index";
 
 class App extends Component {
   state = {
+    filter: "",
     results: []
   };
 
@@ -29,17 +30,21 @@ class App extends Component {
     this.setState({descName});
   };
 
+  handleInputChange = event => {
+    this.setState({ filter: event.target.value })
+  };
+
 
 
   render() {
     return (
       <div>
         <Title>Employee Tracker</Title>
+          <FilterByState/>
           <SortByName 
             sortByNameAsc={this.handleSortAsc} 
             sortByNameDesc={this.handleSortDesc}
           />
-          <FilterByState/>
         <Wrapper>
           {this.state.results.map((result) => (
             <EmployeeTable

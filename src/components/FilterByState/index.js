@@ -5,7 +5,7 @@ function FilterByState() {
     return (
         <form>
           <h2>Enter the state name to filter Employees by their state!</h2>
-          <div className="row mb-4">
+          <div className="row">
             <div className="form-group col-md-4">
               <input id="exampleFormControlInput5" type="email" placeholder="Filter Employees By State" className="form-control form-control-underlined"/>
             </div>
