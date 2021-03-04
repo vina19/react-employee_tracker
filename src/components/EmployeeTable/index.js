@@ -1,6 +1,6 @@
 import React from "react";
 
-function EmployeeCard(props) {
+function EmployeeTable(props) {
   return (
     <table class="table table-bordered table-dark">
       <thead>
@@ -29,4 +29,4 @@ function EmployeeCard(props) {
   );
 };
 
-export default EmployeeCard;
+export default EmployeeTable;

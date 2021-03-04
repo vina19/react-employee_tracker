@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import EmployeeCard from "./EmployeeCard/index";
-import Title from "./Title/index";
-import Wrapper from "./Wrapper/index";
-import SortByName from "./SortByName/index";
+import EmployeeTable from "./components/EmployeeTable/index";
+import Title from "./components/Title/index";
+import Wrapper from "./components/Wrapper/index";
+import SortByName from "./components/SortByName/index";
 
 class App extends Component {
   state = {
@@ -38,7 +38,7 @@ class App extends Component {
           />
         <Wrapper>
           {this.state.results.map((result) => (
-            <EmployeeCard
+            <EmployeeTable
               id={result.id}
               key={result.id}
               image={result.avatar}
