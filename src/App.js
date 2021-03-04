@@ -19,8 +19,14 @@ class App extends Component {
       <div>
           {this.state.results.map((result) => (
             <EmployeeCard
+              id={result.id}
+              key={result.id}
+              image={result.avatar}
               fist_name={result.first_name}
               last_name={result.last_name}
+              location={result.address.state}
+              phone={result.phone_number}
+              email={result.email}
             />
           ))}
       </div>
