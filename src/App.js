@@ -31,12 +31,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Wrapper>
-          <Title>Employee Tracker</Title>
+        <Title>Employee Tracker</Title>
           <SortByName 
             sortByNameAsc={this.handleSortAsc} 
             sortByNameDesc={this.handleSortDesc}
           />
+        <Wrapper>
           {this.state.results.map((result) => (
             <EmployeeCard
               id={result.id}
