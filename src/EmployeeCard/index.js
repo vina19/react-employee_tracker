@@ -1,34 +1,31 @@
 import React from "react";
-import "./style.css";
 
 function EmployeeCard(props) {
   return (
-    <div className="card">
-      <div className="img-container">
-        <object data={props.image} type="image/png">
-          <img
-            alt={props.first_name}
-            src="https://robohash.org/adipisciquodducimus.png"
-          />
-        </object>
-      </div>
-      <div className="content">
-        <ul>
-          <li>
-            <strong>Name:</strong> {props.first_name} {props.last_name}
-          </li>
-          <li>
-            <strong>Location:</strong> {props.location}
-          </li>
-          <li>
-            <strong>Phone:</strong> {props.phone}
-          </li>
-          <li>
-            <strong>Email:</strong> {props.email}
-          </li>
-        </ul>
-      </div>
-    </div>
+    <table class="table table-bordered table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Avatar</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Location</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <object data={props.image} type="image/png" style={{ width: "300px", height: "300px" }}>
+              <img alt={props.first_name} src="https://robohash.org/adipisciquodducimus.png"/>
+            </object>
+          </td>
+          <td>{props.first_name}</td>
+          <td>{props.last_name}</td>
+          <td>{props.location}</td>
+          <td>{props.email}</td>
+        </tr>
+      </tbody>
+    </table>
   );
 };
 

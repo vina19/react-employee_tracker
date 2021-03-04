@@ -42,7 +42,7 @@ class App extends Component {
               id={result.id}
               key={result.id}
               image={result.avatar}
-              fist_name={result.first_name}
+              first_name={result.first_name}
               last_name={result.last_name}
               location={result.address.state}
               phone={result.phone_number}
