@@ -3,6 +3,7 @@ import EmployeeTable from "./components/EmployeeTable/index";
 import Title from "./components/Title/index";
 import Wrapper from "./components/Wrapper/index";
 import SortByName from "./components/SortByName/index";
+import FilterByState from "./components/FilterByState/index";
 
 class App extends Component {
   state = {
@@ -28,6 +29,8 @@ class App extends Component {
     this.setState({descName});
   };
 
+
+
   render() {
     return (
       <div>
@@ -36,6 +39,7 @@ class App extends Component {
             sortByNameAsc={this.handleSortAsc} 
             sortByNameDesc={this.handleSortDesc}
           />
+          <FilterByState/>
         <Wrapper>
           {this.state.results.map((result) => (
             <EmployeeTable
