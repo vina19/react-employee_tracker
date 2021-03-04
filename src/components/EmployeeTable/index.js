@@ -8,7 +8,7 @@ function EmployeeTable(props) {
           <th scope="col">Avatar</th>
           <th scope="col">First Name</th>
           <th scope="col">Last Name</th>
-          <th scope="col">Location</th>
+          <th scope="col">State</th>
           <th scope="col">Email</th>
         </tr>
       </thead>
@@ -21,7 +21,7 @@ function EmployeeTable(props) {
           </td>
           <td>{props.first_name}</td>
           <td>{props.last_name}</td>
-          <td>{props.location}</td>
+          <td>{props.state}</td>
           <td>{props.email}</td>
         </tr>
       </tbody>

@@ -34,13 +34,13 @@ class App extends Component {
     this.setState({ filter: event.target.value })
   };
 
-
-
   render() {
     return (
       <div>
         <Title>Employee Tracker</Title>
-          <FilterByState/>
+          <FilterByState 
+            handleInputChange={this.handleInputChange}
+          />
           <SortByName 
             sortByNameAsc={this.handleSortAsc} 
             sortByNameDesc={this.handleSortDesc}
@@ -53,7 +53,7 @@ class App extends Component {
               image={result.avatar}
               first_name={result.first_name}
               last_name={result.last_name}
-              location={result.address.state}
+              state={result.address.state}
               phone={result.phone_number}
               email={result.email}
             />
