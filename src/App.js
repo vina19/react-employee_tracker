@@ -10,7 +10,7 @@ class App extends Component {
 
   // When the component mounts, load the next dog to be displayed
   componentDidMount() {
-    fetch("https://random-data-api.com/api/users/random_user?size=10")
+    fetch("https://random-data-api.com/api/users/random_user?size=20")
       .then((response) => response.json())
       .then((res) => this.setState({ results: res }))
       .catch((err) => console.log(err));
