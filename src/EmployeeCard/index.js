@@ -4,10 +4,12 @@ function EmployeeCard(props) {
   return (
     <div className="card">
       <div className="img-container">
+        <object data={props.image} type="image/png">
           <img
             alt={props.first_name}
-            src={props.image}
+            src="https://robohash.org/adipisciquodducimus.png"
           />
+        </object>
       </div>
       <div className="content">
         <ul>
