@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import EmployeeCard from "./EmployeeCard/index";
 import Wrapper from "./Wrapper/index";
+import Title from "./Title/index";
 
 class App extends Component {
   state = {
@@ -19,6 +20,7 @@ class App extends Component {
     return (
       <div>
         <Wrapper>
+          <Title>Employee Tracker</Title>
           {this.state.results.map((result) => (
             <EmployeeCard
               id={result.id}
