@@ -1,11 +1,13 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Akaya Telivigala', cursive;
 }
 
 html,
 body,
 #root {
+  background-image: url("./img/watercolor4.jpg");
+  background-size: cover;
   padding: 0;
   margin: 0;
   height: 100%;

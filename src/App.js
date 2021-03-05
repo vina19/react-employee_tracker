@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import EmployeeTable from "./components/EmployeeTable/index";
 import Title from "./components/Title/index";
-import Wrapper from "./components/Wrapper/index";
+//import Wrapper from "./components/Wrapper/index";
 import SortByName from "./components/SortByName/index";
 import FilterByState from "./components/FilterByState/index";
 
@@ -54,7 +54,6 @@ class App extends Component {
             sortByNameAsc={this.handleSortAsc} 
             sortByNameDesc={this.handleSortDesc}
           />
-        <Wrapper>
           {this.state.results.map((result) => (
             <EmployeeTable
               id={result.id}
@@ -67,7 +66,6 @@ class App extends Component {
               email={result.email}
             />
           ))}
-        </Wrapper>
       </div>
     );
   };

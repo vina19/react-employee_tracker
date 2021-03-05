@@ -2,3 +2,11 @@
     padding: 15px;
     text-align: left;
 }
+
+.btn-primary {
+    background-color: rebeccapurple;
+}
+
+h2 {
+    font-family: 'Akaya Telivigala', cursive;
+}
