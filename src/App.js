@@ -7,15 +7,18 @@ import FilterByState from "./components/FilterByState/index";
 
 class App extends Component {
   state = {
-    filter: "",
-    results: []
+    results: [],
+    apiUsers: []
   };
 
   // When the component mounts, load the next dog to be displayed
   componentDidMount() {
     fetch("https://random-data-api.com/api/users/random_user?size=20")
       .then((response) => response.json())
-      .then((res) => this.setState({ results: res }))
+      .then((res) => {
+        this.apiUsers = res;
+        this.setState({ results: res })
+      })
       .catch((err) => console.log(err));
   };
 
@@ -31,7 +34,12 @@ class App extends Component {
   };
 
   handleInputChange = event => {
-    this.setState({ filter: event.target.value })
+    let newUsers = this.apiUsers.filter((data) => {
+      console.log(data.address.state);
+      let searchValue = data.address.state.toLowerCase();
+      return searchValue.indexOf(event.target.value) !== -1;
+    });
+    this.setState({ results:newUsers });
   };
 
   render() {
@@ -39,7 +47,8 @@ class App extends Component {
       <div>
         <Title>Employee Tracker</Title>
           <FilterByState 
-            handleInputChange={this.handleInputChange}
+            // https://stackoverflow.com/questions/58030249/how-to-filter-an-array-with-fetched-data-in-react-js
+            handleInputChange={this.handleInputChange.bind(this)}
           />
           <SortByName 
             sortByNameAsc={this.handleSortAsc} 
