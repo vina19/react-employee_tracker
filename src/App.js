@@ -41,7 +41,7 @@ class App extends Component {
     this.setState({descName});
   };
 
-  // Handling 
+  // Handling the filtering employees data by its state.
   handleInputChange = event => {
     let newUsers = this.apiUsers.filter((data) => {
       console.log(data.address.state);
