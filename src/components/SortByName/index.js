@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 
+// Component for sorting employees by name using buttons in ascending and descending order.
 function SortByName(props) {
   return (
     <div className="sort-btn">

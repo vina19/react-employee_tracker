@@ -6,12 +6,18 @@ import SortByName from "./components/SortByName/index";
 import FilterByState from "./components/FilterByState/index";
 
 class App extends Component {
+
+  // results state to hold the employees data.
+  // apiUsers state to hold the employees data to be filtered by state.
   state = {
     results: [],
     apiUsers: []
   };
 
-  // When the component mounts, load the next dog to be displayed
+  // When the component mounts, fetch the API users data,
+  // then change the response to json format,
+  // then set the apiUsers state with the results from fetching the API users data,
+  // and set the state of results to the results from fetching the API users data.
   componentDidMount() {
     fetch("https://random-data-api.com/api/users/random_user?size=20")
       .then((response) => response.json())
@@ -23,16 +29,19 @@ class App extends Component {
   };
 
   // https://www.florin-pop.com/blog/2019/07/sort-table-data-with-react/
+  // Handling sorting name in ascending order.
   handleSortAsc = () => {
     let ascName = this.state.results.sort((a, b) => a.first_name > b.first_name ? 1 : -1)
     this.setState({ascName});
   };
 
+  // Handling sorting name in descending order.
   handleSortDesc = () => {
     let descName = this.state.results.sort((a, b) => a.first_name < b.first_name ? 1 : -1)
     this.setState({descName});
   };
 
+  // Handling 
   handleInputChange = event => {
     let newUsers = this.apiUsers.filter((data) => {
       console.log(data.address.state);

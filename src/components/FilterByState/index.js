@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 
 // https://medium.com/crobyer/search-filter-with-react-js-88986c644ed5
+// Component for filtering employees data by state with input on change method.
 function FilterByState(props) {
     return (
         <form>

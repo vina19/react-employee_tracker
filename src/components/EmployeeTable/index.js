@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 
+// Component for display needed employees data in table.
 function EmployeeTable(props) {
   return (
     <table className="table table-bordered table-dark">
